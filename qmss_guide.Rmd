@@ -1,0 +1,42 @@
+---
+title: "Level up in R Markdown"
+subtitle: "UCSB QMSS Workshop (February 2021)"
+author: "Allison Horst"
+output: 
+  html_document:
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(palmerpenguins)
+```
+
+## Overview
+
+[R Markdown](https://rmarkdown.rstudio.com/) is a powerful and flexible tool for reproducible data analysis, collaboration, and publication (e.g. papers, blogs, websites, dashboards, CVs) in R or other languages (Python, SQL, and more).
+
+In this workshop, we will: 
+
+- Check out example outputs from R Markdown
+- Review basics of working in R Markdown for data analysis
+- Learn to reference code outputs in text for reproducible and efficient reporting
+- Customize R Markdown outputs for fun and functionality
+- Explore useful functionality in research projects, including: 
+    - [Sourcing external scripts](https://bookdown.org/yihui/rmarkdown-cookbook/source-script.html) in an Rmd
+    - [Caching](https://bookdown.org/yihui/rmarkdown-cookbook/cache.html) time consuming code chunks
+    - Adding a [bibliography](https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html)
+    - Creating [parameterized reports](https://bookdown.org/yihui/rmarkdown/) for automation
+    
+### Resources
+
+- [The R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/) by Yihui Xie, Christophe Dervieux, Emily Riederer
+- [R Markdown: the Definitive Guide](https://bookdown.org/yihui/rmarkdown/) by Yihui Xie, J. J. Allaire, Garrett Grolemund
+- [RStudio's R Markdown site](https://rmarkdown.rstudio.com/)
+- The [R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+
+### Tutorials & lessons
+
+- [RStudio's R Markdown lesson series](https://rmarkdown.rstudio.com/lesson-1.html)
+- Alison Hill's workshop on [Advanced R Markdown](https://alison.rbind.io/project/advanced-r-markdown/)
