@@ -1,0 +1,27 @@
+---
+title: "My document"
+author: "Allison Horst"
+date: "1/29/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## A header
+
+Some *important* text.
+
+```{r}
+# R code in code chunks
+
+# Make a vector
+pet <- c("cat","doc")
+
+# Call it 
+pet
+```
+
+
+
