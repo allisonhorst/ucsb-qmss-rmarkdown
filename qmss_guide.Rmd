@@ -276,7 +276,64 @@ Produces: [@rmarkdown_cookbook; @rmarkdown_guide; @tidyverse_2019]
 
 And there are a bunch of other options to explore re: citations and bibliographies (including changing the citation format automatically to match required styles for different journals!). 
 
-Note that the citations in full appear at the end of the knitted document. 
+The citations in full appear at the end of the knitted document. 
+
+**Note:** If the journal you're publishing to has a Citation Style Language (and .csl), you can add that to the YAML to have your bibliography updated accordingly! See more [here](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html#changing-citation-style).
+
+### From R Markdown to R scripts & back with `spin()` and `purl()`
+
+Sometimes it can be useful to pull out all code from *code chunks* in an R Markdown document and condense them into an R script. Or sometimes it's useful to do the opposite - take information in an R script and add it to an R Markdown document. We can do these with `knitr::purl()` and `knitr::spin()`, respectively. 
+
+- Use `knitr::purl()` to aggregate code from **code chunks** (not inline code) into an R script
+- Use `knitr::spin()` to convert an R script to an R Markdown document
+
+
+#### `purl()`: R Markdown > R script
+
+Let's `purl()` the document you've been working in to create an R script! 
+
+- In the R Console, run `knitr::purl("your_file_name.Rmd")`.
+
+You should see a .R script created in the root, with the same name but ending in .R - check it out! 
+
+#### `spin()`: R script > Markdown
+
+See more information on rendering reports from R scripts [here](https://bookdown.org/yihui/rmarkdown-cookbook/spin.html). Let's create a new little R script, and add some information that will be rendered as Markdown syntax. 
+
+- Create a new empty .R script, then copy and paste the following code & annotation into it: 
+
+```{r, eval = FALSE, echo = TRUE}
+
+#' Let's make a markdown document (.md) with `knitr::spin()`.
+#'
+#' This is normal text
+#'
+#' ## This is a level 2 header
+#'
+#' *This text is italicized*
+
+#+ 
+library(tidyverse)
+
+#+
+# An actual comment in the code chunk
+ggplot(data = starwars, aes(x = height, y = mass)) +
+  geom_point()
+
+#' Then some normal text outside
+
+```
+
+- Save that .R script (e.g. as `starwars_graph.R`). 
+
+- In the Console, run: 
+
+```
+knitr::spin("file_name.R")
+```
+
+Notice that the .md and the knitted HTML are saved! That's how we can render a report straight from an R script. 
+
 
 # Resources
 
