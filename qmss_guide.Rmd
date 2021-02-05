@@ -87,10 +87,10 @@ And we use markdown similarly to update text in other ways, like:
 
 -   A single asterisk on either side of text makes it *italic*
 -   A double asterisk on either side of text makes it *bold*
--   Use hats on the end of text to make a^superscript^
+-   Use a hat (^) on the end of text to make a^superscript^
 -   Or an tilde (\~) on each end to make a~subscript~
 
-You could manually format all of your text in markdown. OR (drum roll) you could use the shiny new visual editor in RMarkdown (formal release of [RStudio 1.4 announced January 2020](https://blog.rstudio.com/2021/01/19/announcing-rstudio-1-4/)). If you are running the newest version of RStudio, there is a compass icon in the top right of the .Rmd tab that allows you to switch between the Visual Editor and plain markdown.
+You could manually format all of your text in markdown. OR (drum roll) you could use the shiny new visual editor in RMarkdown (formal release of [RStudio 1.4 announced January 2021](https://blog.rstudio.com/2021/01/19/announcing-rstudio-1-4/)). If you are running the newest version of RStudio, there is a compass icon in the top right of the .Rmd tab that allows you to switch between the Visual Editor and plain markdown.
 
 ### Code chunks
 
