@@ -22,10 +22,8 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 
 [R Markdown](https://rmarkdown.rstudio.com/) is a powerful and flexible tool for reproducible data analysis, collaboration, and publication (e.g. papers, blogs, websites, dashboards, CVs) in R or other languages (Python, SQL, and more).
 
+Click [HERE](https://docs.google.com/presentation/d/e/2PACX-1vT1Nkj2FN0zyBLxqYugZOICCOMb630VysmOBABGc0IOBs96jnim01RhDCeXXQpDROG6MfQAEVNl0tHt/pub?start=true&loop=false&delayms=3000#slide=id.p) for the workshop intro slides.
 
-```{r, echo = FALSE}
-knitr::include_url('https://docs.google.com/presentation/d/e/2PACX-1vT1Nkj2FN0zyBLxqYugZOICCOMb630VysmOBABGc0IOBs96jnim01RhDCeXXQpDROG6MfQAEVNl0tHt/pub?start=false&loop=false&delayms=3000')
-```
 
 ## Workshop outline
 
