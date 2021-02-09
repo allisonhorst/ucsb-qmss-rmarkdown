@@ -115,9 +115,9 @@ When we knit, the code and graph appear in the document, demonstrating that we c
 
 Chunk options are options designated in the code chunk header that determine what appears or does not appear for each chunk upon knitting (and a lot more, but we'll start there...). For more information on code chunk options in R Markdown, see Chapter 11 in the [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/chunk-options.html).
 
-Chunk hooks can be added to individual code chunk headers (within the `{r}` atop the chunk), or applied globally by adding options to the `{r setup}` code chunk at the top of the document. 
+Chunk options can be added to individual code chunk headers (within the `{r}` atop the chunk), or applied globally by adding options to the `{r setup}` code chunk at the top of the document. 
 
-Here are some common hooks: 
+Here are some common chunk options: 
 
 - `echo = FALSE`: do not show the code in the knitted document
 - `include = FALSE`: do not include code or any outputs in knitted document
@@ -168,7 +168,13 @@ The common option of copying and pasting values, however, is **tedious** and **d
 
 In R Markdown, we add code inline with a single back-tick (`) on either end, and a lowercase r between to start it.
 
-Then we can insert code within our text, like this: "The mean flipper length for all penguins in the dataset is `r round(mean(penguins$flipper_length_mm, na.rm = TRUE), 2)` mm."
+Then we can insert code within our text, which under the hood contains this inline R code to calculate the mean flipper length for all penguins:
+
+```
+r round(mean(penguins$flipper_length_mm, na.rm = TRUE), 2)
+```
+
+...to produce this output: "The mean flipper length for all penguins in the dataset is `r round(mean(penguins$flipper_length_mm, na.rm = TRUE), 2)` mm."
 
 Then, if our data or code ever *change*, so will our text output.  
 
