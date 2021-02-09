@@ -104,7 +104,7 @@ Code chunks are where we'll add most code in an R Markdown document (though we'l
 
 Within a new code chunk, let's add some code: 
 
-```{r, echo = TRUE}
+```{r, echo = TRUE, eval = FALSE}
 ggplot(data = penguins, aes(x = species, y = body_mass_g)) +
   geom_jitter()
 ```
